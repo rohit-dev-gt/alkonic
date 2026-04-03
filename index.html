@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alkonic – India's First Medical Grade Water Ionizer | Water Beyond Purity</title>
+<meta name="description" content="Alkonic delivers India's first medical-grade alkaline water ionizer. 5th Gen Technology, 30-year life, 72-hour service. Starting ₹1,54,999.">
+<meta property="og:title" content="Alkonic – Water Beyond Purity">
+<meta property="og:description" content="India's First Medical Grade Water Ionizer. 5th Gen Technology. Starts from ₹1,54,999.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #ffd100;
+    --navy: #032c4b;
+    --navy-deep: #021e34;
+    --navy-mid: #054070;
+    --white: #ffffff;
+    --off-white: #f8f6f0;
+    --light-grey: #e8e4d8;
+    --text-muted: #8899aa;
+    --gold-glow: rgba(255,209,0,0.15);
+    --glass: rgba(3,44,75,0.65);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* ─── HEADER ─────────────────────────────────────────────────── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 5vw;
+    height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(3,44,75,0.92);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,209,0,0.15);
+    transition: all 0.3s ease;
+  }
+  header.scrolled {
+    height: 60px;
+    background: rgba(2,30,52,0.97);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.3);
+  }
+  .logo-area { display: flex; align-items: center; gap: 12px; }
+  .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem; font-weight: 600;
+    color: var(--white); letter-spacing: 1px;
+  }
+  .logo-text span { color: var(--gold); }
+  .logo-drop {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--gold), #ffb700);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  nav { display: flex; gap: 32px; align-items: center; }
+  nav a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px;
+    transition: color 0.2s; position: relative;
+  }
+  nav a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--gold); transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+  nav a:hover { color: var(--gold); }
+  nav a:hover::after { transform: scaleX(1); }
+  .header-cta {
+    background: var(--gold); color: var(--navy);
+    border: none; padding: 10px 22px;
+    font-family: 'DM Sans', sans-serif; font-weight: 600;
+    font-size: 0.85rem; letter-spacing: 0.5px;
+    cursor: pointer; transition: all 0.25s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+  .header-cta:hover { background: #ffdb30; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,209,0,0.4); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+
+  /* ─── HERO ────────────────────────────────────────────────────── */
+  #hero {
+    min-height: 100vh;
+    background: linear-gradient(155deg, var(--navy-deep) 0%, var(--navy) 40%, var(--navy-mid) 100%);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: 120px 5vw 80px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse 60% 50% at 75% 50%, rgba(255,209,0,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(5,64,112,0.5) 0%, transparent 70%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: linear-gradient(rgba(255,209,0,0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,209,0,0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-orb {
+    position: absolute; border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+  }
+  .orb1 {
+    width: 400px; height: 400px; right: 8%; top: 15%;
+    background: radial-gradient(circle, rgba(255,209,0,0.12) 0%, transparent 70%);
+    animation-delay: 0s;
+  }
+  .orb2 {
+    width: 200px; height: 200px; right: 20%; top: 50%;
+    background: radial-gradient(circle, rgba(5,100,180,0.2) 0%, transparent 70%);
+    animation-delay: 2s;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 700px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,209,0,0.1); border: 1px solid rgba(255,209,0,0.3);
+    color: var(--gold); padding: 6px 16px; font-size: 0.75rem;
+    letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+    margin-bottom: 32px;
+    animation: fadeSlideUp 0.8s ease both;
+  }
+  .hero-badge::before { content: '◆'; font-size: 0.5rem; }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 300; line-height: 1.05;
+    color: var(--white); margin-bottom: 24px;
+    animation: fadeSlideUp 0.8s 0.2s ease both;
+  }
+  .hero-title em { font-style: italic; color: var(--gold); }
+  .hero-title strong { font-weight: 600; }
+  .hero-sub {
+    font-size: 1.1rem; color: rgba(255,255,255,0.65);
+    line-height: 1.7; margin-bottom: 12px;
+    animation: fadeSlideUp 0.8s 0.35s ease both;
+  }
+  .hero-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem; color: var(--gold); font-weight: 500;
+    margin-bottom: 36px;
+    animation: fadeSlideUp 0.8s 0.45s ease both;
+  }
+  .hero-pills {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px;
+    animation: fadeSlideUp 0.8s 0.55s ease both;
+  }
+  .pill {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.8); padding: 7px 16px; font-size: 0.78rem;
+    font-weight: 500; letter-spacing: 0.3px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .pill::before { content: '✦'; color: var(--gold); font-size: 0.6rem; }
+  .hero-btns {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    animation: fadeSlideUp 0.8s 0.65s ease both;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    border: none; padding: 16px 36px;
+    font-family: 'DM Sans', sans-serif; font-weight: 700;
+    font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; transition: all 0.3s;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  }
+  .btn-primary:hover { background: #ffdb30; transform: translateY(-2px); box-shadow: 0 10px 40px rgba(255,209,0,0.5); }
+  .btn-outline {
+    background: transparent; color: var(--white);
+    border: 1px solid rgba(255,255,255,0.4); padding: 16px 36px;
+    font-family: 'DM Sans', sans-serif; font-weight: 500;
+    font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  /* Hero right visual */
+  .hero-visual {
+    position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+    width: 380px; display: flex; flex-direction: column; align-items: center;
+    animation: fadeIn 1.2s 0.3s ease both;
+  }
+  .machine-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,209,0,0.2);
+    backdrop-filter: blur(20px); padding: 40px 32px;
+    text-align: center; position: relative;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .machine-card::before {
+    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 60%; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .machine-icon {
+    width: 120px; height: 160px; margin: 0 auto 24px;
+    position: relative;
+  }
+  .machine-body {
+    width: 100%; height: 100%;
+    background: linear-gradient(160deg, #0a4a7a, #032c4b, #021e34);
+    border-radius: 16px 16px 8px 8px;
+    position: relative; overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,209,0,0.3);
+  }
+  .machine-body::before {
+    content: ''; position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+    width: 40px; height: 40px;
+    background: radial-gradient(circle, rgba(255,209,0,0.6), transparent 70%);
+    border-radius: 50%; animation: pulse 2s ease-in-out infinite;
+  }
+  .machine-body::after {
+    content: 'ALKONIC'; position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif; font-size: 0.7rem; letter-spacing: 3px;
+    color: rgba(255,209,0,0.6);
+  }
+  @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+  .machine-lines {
+    position: absolute; top: 70px; left: 0; right: 0;
+    display: flex; flex-direction: column; gap: 8px; padding: 0 12px;
+  }
+  .mline { height: 2px; background: linear-gradient(90deg, transparent, rgba(255,209,0,0.3), transparent); }
+  .machine-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin-top: 20px;
+  }
+  .mstat {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    padding: 10px; text-align: center;
+  }
+  .mstat-val {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;
+    color: var(--gold); font-weight: 600; display: block;
+  }
+  .mstat-label { font-size: 0.65rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; }
+
+  @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  /* ─── SCROLL HINT ─────────────────────────────────────────────── */
+  .scroll-hint {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.3); font-size: 0.7rem; letter-spacing: 2px;
+    text-transform: uppercase; animation: fadeIn 1s 1.5s both;
+  }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, rgba(255,209,0,0.5), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse { 0%{opacity:0;transform:scaleY(0)}50%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(1)} }
+
+  /* ─── SECTION BASE ────────────────────────────────────────────── */
+  section { padding: 100px 5vw; }
+  .section-label {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--gold); font-size: 0.72rem; letter-spacing: 3px;
+    text-transform: uppercase; font-weight: 600; margin-bottom: 20px;
+  }
+  .section-label::before, .section-label::after {
+    content: ''; display: block; height: 1px; width: 30px; background: var(--gold); opacity: 0.5;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 400; line-height: 1.1; margin-bottom: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--navy-mid); }
+  .section-desc { font-size: 1rem; color: #556677; line-height: 1.75; max-width: 560px; }
+  .reveal { opacity: 0; transform: translateY(32px); transition: all 0.7s cubic-bezier(0.23,1,0.32,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── TRUST STATS ─────────────────────────────────────────────── */
+  #trust {
+    background: var(--navy);
+    padding: 70px 5vw;
+  }
+  .trust-inner {
+    display: flex; gap: 0;
+    border: 1px solid rgba(255,209,0,0.15);
+    overflow: hidden;
+  }
+  .trust-stat {
+    flex: 1; padding: 48px 32px;
+    text-align: center; position: relative;
+    border-right: 1px solid rgba(255,209,0,0.1);
+    transition: background 0.3s;
+  }
+  .trust-stat:last-child { border-right: none; }
+  .trust-stat:hover { background: rgba(255,209,0,0.04); }
+  .trust-stat::after {
+    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 40px; height: 2px; background: var(--gold); opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .trust-stat:hover::after { opacity: 1; }
+  .trust-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem; font-weight: 300; color: var(--gold);
+    line-height: 1;
+  }
+  .trust-label { font-size: 0.8rem; color: rgba(255,255,255,0.55); letter-spacing: 1px; margin-top: 8px; text-transform: uppercase; }
+
+  /* ─── PROBLEM/SOLUTION ────────────────────────────────────────── */
+  #problem { background: var(--off-white); }
+  .ps-grid {
+    display: grid; grid-template-columns: 1fr 80px 1fr; gap: 0;
+    align-items: stretch; margin-top: 60px;
+  }
+  .ps-col {
+    padding: 56px 48px; position: relative;
+  }
+  .ps-problem { background: #f0ece0; border: 1px solid #e0dace; }
+  .ps-solution { background: var(--navy); border: 1px solid var(--navy-mid); }
+  .ps-divider {
+    display: flex; align-items: center; justify-content: center;
+    background: var(--gold);
+    clip-path: polygon(0 10%, 50% 0, 100% 10%, 100% 90%, 50% 100%, 0 90%);
+    position: relative;
+  }
+  .ps-divider span {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+    font-weight: 600; color: var(--navy); writing-mode: vertical-rl;
+    letter-spacing: 3px;
+  }
+  .ps-col-label {
+    font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;
+    font-weight: 600; margin-bottom: 24px;
+  }
+  .ps-problem .ps-col-label { color: #aa6666; }
+  .ps-solution .ps-col-label { color: var(--gold); }
+  .ps-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .ps-list li {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-size: 0.95rem; line-height: 1.5;
+  }
+  .ps-problem .ps-list li { color: #664444; }
+  .ps-solution .ps-list li { color: rgba(255,255,255,0.8); }
+  .ps-icon { width: 22px; flex-shrink: 0; text-align: center; margin-top: 1px; }
+
+  /* ─── BENEFITS ────────────────────────────────────────────────── */
+  #benefits { background: var(--white); }
+  .benefits-header { text-align: center; margin-bottom: 64px; }
+  .benefits-header .section-desc { margin: 0 auto; }
+  .benefits-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
+  }
+  .benefit-card {
+    background: var(--off-white); padding: 40px 28px;
+    position: relative; overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.23,1,0.32,1);
+    border: 1px solid transparent;
+    cursor: default;
+  }
+  .benefit-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    opacity: 0; transition: opacity 0.35s;
+  }
+  .benefit-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 20px 60px rgba(3,44,75,0.15); }
+  .benefit-card:hover::before { opacity: 1; }
+  .benefit-card:hover .benefit-title { color: var(--white); }
+  .benefit-card:hover .benefit-desc { color: rgba(255,255,255,0.65); }
+  .benefit-card:hover .benefit-num { color: rgba(255,209,0,0.15); }
+  .benefit-icon {
+    font-size: 2rem; margin-bottom: 16px; position: relative; z-index: 1;
+    transition: transform 0.35s;
+  }
+  .benefit-card:hover .benefit-icon { transform: scale(1.2); }
+  .benefit-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 8px; position: relative; z-index: 1; transition: color 0.3s; }
+  .benefit-desc { font-size: 0.82rem; color: #778899; line-height: 1.6; position: relative; z-index: 1; transition: color 0.3s; }
+  .benefit-num {
+    position: absolute; bottom: -8px; right: 12px;
+    font-family: 'Cormorant Garamond', serif; font-size: 5rem;
+    color: rgba(3,44,75,0.06); font-weight: 700; line-height: 1;
+    transition: color 0.3s;
+  }
+
+  /* ─── PRODUCTS ────────────────────────────────────────────────── */
+  #products { background: var(--off-white); }
+  .products-header { margin-bottom: 60px; }
+  .products-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .product-card {
+    background: var(--white); position: relative; overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.23,1,0.32,1);
+    border: 1px solid #e8e4d8;
+  }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 30px 80px rgba(3,44,75,0.12); border-color: rgba(255,209,0,0.4); }
+  .product-badge {
+    position: absolute; top: 20px; left: 0;
+    background: var(--gold); color: var(--navy);
+    font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;
+    font-weight: 700; padding: 4px 14px 4px 12px;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+  }
+  .product-img {
+    height: 220px; background: linear-gradient(145deg, var(--navy-deep), var(--navy));
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .product-img::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(255,209,0,0.08), transparent 70%);
+  }
+  .product-model {
+    width: 80px; height: 120px;
+    background: linear-gradient(160deg, #0d5a8c, #032c4b);
+    border-radius: 12px 12px 6px 6px;
+    border: 1px solid rgba(255,209,0,0.3);
+    position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+  .product-model::before {
+    content: ''; position: absolute;
+    top: 20px; left: 50%; transform: translateX(-50%);
+    width: 30px; height: 30px;
+    background: radial-gradient(circle, rgba(255,209,0,0.5), transparent 70%);
+    border-radius: 50%;
+  }
+  .product-model::after {
+    content: attr(data-model); position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+    font-size: 0.5rem; letter-spacing: 2px; color: rgba(255,209,0,0.6); white-space: nowrap;
+  }
+  .product-body { padding: 28px; }
+  .product-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: 4px; }
+  .product-tagline { font-size: 0.78rem; color: #889; margin-bottom: 16px; }
+  .product-specs {
+    display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px;
+    border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 14px 0;
+  }
+  .spec { display: flex; justify-content: space-between; font-size: 0.78rem; }
+  .spec-key { color: #889; }
+  .spec-val { font-weight: 600; color: var(--navy); }
+  .product-price {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.7rem;
+    color: var(--navy); font-weight: 500; margin-bottom: 16px;
+  }
+  .product-price span { font-size: 0.8rem; color: #889; font-family: 'DM Sans', sans-serif; }
+  .btn-product {
+    width: 100%; background: var(--navy); color: var(--white);
+    border: none; padding: 13px; font-family: 'DM Sans', sans-serif;
+    font-weight: 600; font-size: 0.82rem; letter-spacing: 1px;
+    text-transform: uppercase; cursor: pointer;
+    transition: all 0.25s; position: relative; overflow: hidden;
+  }
+  .btn-product::before {
+    content: ''; position: absolute; inset: 0; left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255,209,0,0.15), transparent);
+    transition: left 0.4s;
+  }
+  .btn-product:hover { background: var(--navy-mid); }
+  .btn-product:hover::before { left: 100%; }
+
+  /* ─── TECHNOLOGY ──────────────────────────────────────────────── */
+  #technology { background: var(--navy-deep); }
+  #technology .section-title { color: var(--white); }
+  #technology .section-desc { color: rgba(255,255,255,0.55); }
+  .tech-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px;
+  }
+  .tech-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+    padding: 48px 28px; text-align: center; position: relative; overflow: hidden;
+    transition: all 0.35s;
+  }
+  .tech-card:hover { background: rgba(255,209,0,0.05); border-color: rgba(255,209,0,0.2); transform: translateY(-4px); }
+  .tech-ring {
+    width: 80px; height: 80px; border-radius: 50%;
+    border: 1px solid rgba(255,209,0,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+    position: relative;
+    animation: rotateSlow 12s linear infinite;
+  }
+  .tech-ring::before {
+    content: ''; position: absolute; inset: 4px; border-radius: 50%;
+    border: 1px dashed rgba(255,209,0,0.15);
+  }
+  @keyframes rotateSlow { to { transform: rotate(360deg); } }
+  .tech-inner { animation: rotateReverse 12s linear infinite; font-size: 1.8rem; }
+  @keyframes rotateReverse { to { transform: rotate(-360deg); } }
+  .tech-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white); font-weight: 500; margin-bottom: 10px; }
+  .tech-desc { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.7; }
+  .tech-value { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold); font-weight: 300; margin-bottom: 8px; }
+
+  /* ─── COMPARISON ──────────────────────────────────────────────── */
+  #comparison { background: var(--white); }
+  .comparison-table {
+    margin-top: 56px; width: 100%; border-collapse: collapse;
+    overflow: hidden;
+  }
+  .comparison-table thead tr { background: var(--navy); }
+  .comparison-table th {
+    padding: 20px 28px; text-align: left;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
+    font-weight: 400; letter-spacing: 0.5px;
+  }
+  .comparison-table th:first-child { color: rgba(255,255,255,0.7); }
+  .comparison-table th:nth-child(2) { color: rgba(255,255,255,0.5); text-align: center; }
+  .comparison-table th:nth-child(3) { color: var(--gold); text-align: center; }
+  .comparison-table tbody tr { border-bottom: 1px solid #f0ece0; transition: background 0.2s; }
+  .comparison-table tbody tr:hover { background: #faf8f2; }
+  .comparison-table td { padding: 16px 28px; font-size: 0.9rem; }
+  .comparison-table td:first-child { color: #445566; font-weight: 500; }
+  .comparison-table td:nth-child(2) { text-align: center; color: #aaa; }
+  .comparison-table td:nth-child(3) { text-align: center; color: var(--navy); font-weight: 600; }
+  .check { color: #22aa55; font-size: 1rem; }
+  .cross { color: #cc4444; font-size: 0.9rem; }
+  .highlight-col { background: rgba(255,209,0,0.05); }
+
+  /* ─── WHY ALKONIC ─────────────────────────────────────────────── */
+  #why { background: linear-gradient(135deg, var(--navy) 0%, #054070 100%); }
+  #why .section-title { color: var(--white); }
+  #why .section-desc { color: rgba(255,255,255,0.55); }
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: 56px; }
+  .why-item {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+    padding: 40px 36px; display: flex; gap: 24px; align-items: flex-start;
+    transition: all 0.3s;
+  }
+  .why-item:hover { background: rgba(255,209,0,0.06); border-color: rgba(255,209,0,0.2); }
+  .why-icon {
+    width: 48px; height: 48px; flex-shrink: 0;
+    background: rgba(255,209,0,0.1); border: 1px solid rgba(255,209,0,0.25);
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+  }
+  .why-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white); font-weight: 600; margin-bottom: 8px; }
+  .why-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+  /* ─── TESTIMONIALS ────────────────────────────────────────────── */
+  #testimonials { background: var(--off-white); }
+  .testi-track { display: flex; gap: 24px; margin-top: 56px; overflow: hidden; }
+  .testi-card {
+    min-width: calc(33.33% - 16px); background: var(--white);
+    border: 1px solid #e8e4d8; padding: 36px; position: relative;
+    transition: all 0.3s;
+  }
+  .testi-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(3,44,75,0.1); border-color: rgba(255,209,0,0.3); }
+  .testi-card::before {
+    content: '"'; position: absolute; top: 20px; right: 28px;
+    font-family: 'Cormorant Garamond', serif; font-size: 5rem;
+    color: rgba(255,209,0,0.15); line-height: 1;
+  }
+  .testi-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 16px; letter-spacing: 2px; }
+  .testi-text { font-size: 0.9rem; color: #556677; line-height: 1.8; margin-bottom: 24px; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--white); font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 600;
+    border: 2px solid rgba(255,209,0,0.3);
+  }
+  .testi-name { font-weight: 600; font-size: 0.88rem; color: var(--navy); }
+  .testi-location { font-size: 0.75rem; color: #889; }
+
+  /* ─── BLOG ────────────────────────────────────────────────────── */
+  #blog { background: var(--white); }
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+  .blog-card { border: 1px solid #e8e4d8; overflow: hidden; transition: all 0.3s; }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(3,44,75,0.1); }
+  .blog-thumb {
+    height: 180px;
+    background: linear-gradient(145deg, var(--navy), var(--navy-mid));
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .blog-thumb-icon { font-size: 3rem; opacity: 0.3; }
+  .blog-cat {
+    position: absolute; bottom: 16px; left: 16px;
+    background: var(--gold); color: var(--navy);
+    font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase;
+    font-weight: 700; padding: 4px 10px;
+  }
+  .blog-body { padding: 24px; }
+  .blog-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 10px; line-height: 1.3; color: var(--navy); }
+  .blog-excerpt { font-size: 0.82rem; color: #778899; line-height: 1.7; margin-bottom: 16px; }
+  .blog-meta { font-size: 0.72rem; color: #aab; display: flex; gap: 12px; }
+
+  /* ─── FAQ ─────────────────────────────────────────────────────── */
+  #faq { background: var(--off-white); }
+  .faq-grid { max-width: 800px; margin: 56px auto 0; display: flex; flex-direction: column; gap: 2px; }
+  .faq-item { background: var(--white); border: 1px solid #e8e4d8; overflow: hidden; }
+  .faq-q {
+    padding: 20px 24px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    font-weight: 500; font-size: 0.92rem; color: var(--navy);
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .faq-q:hover { background: #faf8f2; color: var(--navy-mid); }
+  .faq-q.open { color: var(--gold); background: var(--navy); }
+  .faq-arrow { font-size: 0.7rem; transition: transform 0.3s; }
+  .faq-q.open .faq-arrow { transform: rotate(180deg); color: var(--gold); }
+  .faq-a {
+    max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s;
+    font-size: 0.875rem; color: #556677; line-height: 1.8;
+    padding: 0 24px;
+    border-top: 1px solid transparent;
+  }
+  .faq-a.open { max-height: 200px; padding: 16px 24px; border-top-color: #eee; }
+
+  /* ─── CTA SECTION ─────────────────────────────────────────────── */
+  #cta-final {
+    background: linear-gradient(160deg, var(--navy-deep), var(--navy));
+    text-align: center; padding: 120px 5vw;
+    position: relative; overflow: hidden;
+  }
+  #cta-final::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at center, rgba(255,209,0,0.07), transparent);
+  }
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300;
+    color: var(--white); line-height: 1.1; margin-bottom: 16px;
+    position: relative;
+  }
+  .cta-title em { color: var(--gold); font-style: italic; }
+  .cta-sub { color: rgba(255,255,255,0.55); font-size: 1rem; margin-bottom: 48px; position: relative; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; position: relative; }
+
+  /* ─── FOOTER ──────────────────────────────────────────────────── */
+  footer {
+    background: #010f1a; color: rgba(255,255,255,0.6);
+    padding: 80px 5vw 40px;
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+    padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-brand-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600;
+    color: var(--white); margin-bottom: 6px;
+  }
+  .footer-brand-name span { color: var(--gold); }
+  .footer-tagline { font-size: 0.78rem; color: rgba(255,209,0,0.6); letter-spacing: 2px; margin-bottom: 20px; }
+  .footer-about { font-size: 0.82rem; line-height: 1.8; color: rgba(255,255,255,0.45); margin-bottom: 24px; }
+  .footer-social { display: flex; gap: 10px; }
+  .social-btn {
+    width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; color: rgba(255,255,255,0.5); text-decoration: none;
+    transition: all 0.2s;
+  }
+  .social-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-col-title { font-weight: 600; font-size: 0.78rem; color: var(--white); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; display: flex; gap: 8px; align-items: center; }
+  .footer-links a::before { content: '→'; font-size: 0.65rem; color: var(--gold); opacity: 0; transition: opacity 0.2s; }
+  .footer-links a:hover { color: rgba(255,255,255,0.8); }
+  .footer-links a:hover::before { opacity: 1; }
+  .contact-item { display: flex; gap: 10px; align-items: flex-start; font-size: 0.82rem; margin-bottom: 12px; }
+  .contact-icon { color: var(--gold); flex-shrink: 0; }
+  .footer-bottom {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 32px; font-size: 0.75rem; color: rgba(255,255,255,0.3);
+  }
+  .footer-gold-line {
+    height: 2px; background: linear-gradient(90deg, var(--gold), rgba(255,209,0,0.3), transparent);
+    margin-bottom: 40px;
+  }
+
+  /* ─── WHATSAPP FLOAT ──────────────────────────────────────────── */
+  .wa-float {
+    position: fixed; bottom: 32px; right: 32px; z-index: 999;
+    width: 56px; height: 56px;
+    background: #25d366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+    text-decoration: none; color: white; font-size: 1.5rem;
+    transition: all 0.3s; animation: waPulse 3s ease-in-out infinite;
+  }
+  .wa-float:hover { transform: scale(1.1); box-shadow: 0 12px 40px rgba(37,211,102,0.6); }
+  @keyframes waPulse {
+    0%,100%{box-shadow:0 8px 30px rgba(37,211,102,0.4)}
+    50%{box-shadow:0 8px 30px rgba(37,211,102,0.7),0 0 0 12px rgba(37,211,102,0.1)}
+  }
+
+  /* ─── LEAD FORM OVERLAY ───────────────────────────────────────── */
+  .overlay {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(1,15,26,0.85); backdrop-filter: blur(8px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  }
+  .overlay.active { opacity: 1; pointer-events: all; }
+  .modal {
+    background: var(--white); max-width: 480px; width: 90%;
+    position: relative;
+    transform: scale(0.95); transition: transform 0.3s;
+  }
+  .overlay.active .modal { transform: scale(1); }
+  .modal-top {
+    background: var(--navy); padding: 36px 32px;
+    text-align: center; position: relative;
+  }
+  .modal-top::after {
+    content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 60%; height: 2px; background: var(--gold);
+  }
+  .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); margin-bottom: 6px; }
+  .modal-sub { font-size: 0.8rem; color: rgba(255,255,255,0.55); }
+  .modal-body { padding: 32px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.5px; color: var(--navy); margin-bottom: 6px; }
+  .form-group input, .form-group select {
+    width: 100%; padding: 12px 16px;
+    border: 1px solid #ddd; font-family: 'DM Sans', sans-serif; font-size: 0.88rem;
+    color: var(--navy); background: var(--off-white);
+    transition: border-color 0.2s; outline: none;
+  }
+  .form-group input:focus, .form-group select:focus { border-color: var(--gold); background: var(--white); }
+  .modal-submit {
+    width: 100%; background: var(--gold); color: var(--navy);
+    border: none; padding: 15px; font-family: 'DM Sans', sans-serif;
+    font-weight: 700; font-size: 0.88rem; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; transition: all 0.25s;
+    margin-top: 8px;
+  }
+  .modal-submit:hover { background: #ffdb30; }
+  .modal-close {
+    position: absolute; top: 16px; right: 16px;
+    background: none; border: none; color: rgba(255,255,255,0.5); font-size: 1.2rem; cursor: pointer;
+  }
+  .modal-close:hover { color: var(--white); }
+  .scrolling-table{
+    overflow-x: auto;
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────────────────── */
+  @media (max-width: 1100px) {
+    .hero-visual { display: none; }
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+    .tech-grid { grid-template-columns: repeat(2, 1fr); }
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    nav, .header-cta { display: none; }
+    .hamburger { display: flex; }
+    .ps-grid { grid-template-columns: 1fr; }
+    .ps-divider { display: none; }
+    .trust-inner { flex-direction: column; }
+    .trust-stat { border-right: none; border-bottom: 1px solid rgba(255,209,0,0.1); }
+    .why-grid { grid-template-columns: 1fr; }
+    .testi-track { flex-direction: column; }
+    .testi-card { min-width: 100%; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .products-grid { grid-template-columns: 1fr; }
+    .benefits-grid { grid-template-columns: 1fr 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .cta-btns { flex-direction: column; align-items: center; }
+    section { padding: 70px 5vw; }
+  }
+  
+  @media (max-width: 480px) {
+    .benefits-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.4rem; }
+    .tech-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="main-header">
+  <div class="logo-area">
+    <div class="logo-drop"></div>
+    <div class="logo-text">Alk<span>◉</span>nic</div>
+  </div>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#products">Products</a>
+    <a href="#technology">Technology</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#faq">FAQ</a>
+    <a href="#blog">Blog</a>
+  </nav>
+  <button class="header-cta" onclick="openModal()">Get Free Demo</button>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Alkonic — Water Beyond Purity</div>
+    <h1 class="hero-title">
+      India's First<br><em>Medical Grade</em><br><strong>Water Ionizer</strong>
+    </h1>
+    <p class="hero-sub">Experience the science of alkaline hydration — engineered for a longer, healthier life.</p>
+    <div class="hero-price">Starting from ₹1,54,999</div>
+    <div class="hero-pills">
+      <div class="pill">5th Gen Technology</div>
+      <div class="pill">5 Years Warranty</div>
+      <div class="pill">30 Years Life</div>
+      <div class="pill">72 Hr Service</div>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="openModal()">Get Free Demo</button>
+      <button class="btn-outline" onclick="openModal()">Get a Quote</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="machine-card">
+      <div class="machine-icon">
+        <div class="machine-body" data-model="A L K O N I C">
+          <div class="machine-lines">
+            <div class="mline"></div>
+            <div class="mline"></div>
+            <div class="mline"></div>
+          </div>
+        </div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--white);margin-bottom:4px">Pro Series X9</div>
+      <div style="font-size:0.72rem;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:20px">FLAGSHIP MODEL</div>
+      <div class="machine-stats">
+        <div class="mstat"><span class="mstat-val">9.5</span><div class="mstat-label">pH Max</div></div>
+        <div class="mstat"><span class="mstat-val">-800</span><div class="mstat-label">ORP mV</div></div>
+        <div class="mstat"><span class="mstat-val">7</span><div class="mstat-label">Plates</div></div>
+        <div class="mstat"><span class="mstat-val">5yr</span><div class="mstat-label">Warranty</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</section>
+
+<!-- TRUST STATS -->
+<section id="trust">
+  <div class="trust-inner reveal">
+    <div class="trust-stat">
+      <div class="trust-num" data-target="29">0</div>
+      <div class="trust-label">Years Experience</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-num" data-target="17600" data-suffix="+">0</div>
+      <div class="trust-label">Installations</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-num" data-target="97" data-suffix="%">0</div>
+      <div class="trust-label">Happy Clients</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-num">4.7★</div>
+      <div class="trust-label">Customer Rating</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM / SOLUTION -->
+<section id="problem">
+  <div style="text-align:center;max-width:600px;margin:0 auto">
+    <div class="section-label">The Challenge</div>
+    <h2 class="section-title">Your water might be <em>working against you</em></h2>
+    <p class="section-desc">Most tap water is acidic, mineral-poor and a silent contributor to chronic health issues. Alkonic changes that.</p>
+  </div>
+  <div class="ps-grid reveal" style="margin-top:60px">
+    <div class="ps-col ps-problem">
+      <div class="ps-col-label">⚠ The Problem</div>
+      <ul class="ps-list">
+        <li><span class="ps-icon">💧</span> Poor cellular hydration and low absorption</li>
+        <li><span class="ps-icon">🔴</span> Rising lifestyle diseases — diabetes, BP, obesity</li>
+        <li><span class="ps-icon">⚗️</span> Acidic body pH accelerating cellular aging</li>
+        <li><span class="ps-icon">🧪</span> Tap water loaded with chlorine & heavy metals</li>
+        <li><span class="ps-icon">😴</span> Chronic fatigue, poor skin, low immunity</li>
+      </ul>
+    </div>
+    <div class="ps-divider"><span>vs</span></div>
+    <div class="ps-col ps-solution">
+      <div class="ps-col-label">✦ The Alkonic Solution</div>
+      <ul class="ps-list">
+        <li><span class="ps-icon">✅</span> Micro-clustered water penetrates cells 6× deeper</li>
+        <li><span class="ps-icon">✅</span> Alkaline pH 7.5–9.5 balances body chemistry</li>
+        <li><span class="ps-icon">✅</span> Powerful antioxidants neutralise free radicals</li>
+        <li><span class="ps-icon">✅</span> Active hydrogen for cellular repair & detox</li>
+        <li><span class="ps-icon">✅</span> Medical-grade filtration removes 99.9% impurities</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits">
+  <div class="benefits-header reveal">
+    <div class="section-label">Health Outcomes</div>
+    <h2 class="section-title">Science-backed <em>health benefits</em></h2>
+    <p class="section-desc">Thousands of Alkonic users report measurable improvements within weeks of switching to alkaline ionized water.</p>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card reveal"><div class="benefit-icon">💧</div><div class="benefit-title">Deep Hydration</div><div class="benefit-desc">Micro-clustered molecules hydrate at cellular level, dramatically improving absorption and energy.</div><div class="benefit-num">01</div></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">❤️</div><div class="benefit-title">Diabetes & BP Support</div><div class="benefit-desc">Alkaline water helps regulate blood sugar and supports healthy blood pressure management.</div><div class="benefit-num">02</div></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">🌙</div><div class="benefit-title">Better Sleep</div><div class="benefit-desc">Balanced pH reduces cortisol and promotes deeper, more restorative sleep cycles.</div><div class="benefit-num">03</div></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">🛡️</div><div class="benefit-title">Boost Immunity</div><div class="benefit-desc">Antioxidant-rich water strengthens your immune system and fights oxidative stress daily.</div><div class="benefit-num">04</div></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">🌿</div><div class="benefit-title">Improved Digestion</div><div class="benefit-desc">Neutralises excess acidity in the gut, reducing bloating, reflux and digestive discomfort.</div><div class="benefit-num">05</div></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">✨</div><div class="benefit-title">Skin Improvement</div><div class="benefit-desc">Superior hydration and antioxidants visibly improve skin texture, elasticity and glow.</div><div class="benefit-num">06</div></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">🔬</div><div class="benefit-title">Detox Support</div><div class="benefit-desc">Helps flush toxins and heavy metals more efficiently through enhanced kidney function.</div><div class="benefit-num">07</div></div>
+    <div class="benefit-card reveal"><div class="benefit-icon">🧬</div><div class="benefit-title">Anti-Inflammatory</div><div class="benefit-desc">Molecular hydrogen in Alkonic water is clinically studied for powerful anti-inflammatory effects.</div><div class="benefit-num">08</div></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="products-header reveal">
+    <div class="section-label">Our Range</div>
+    <h2 class="section-title">Precision-engineered <em>ionizers</em></h2>
+    <p class="section-desc">Choose from our flagship lineup — built with 5th generation technology, each model is a lifetime investment in your family's health.</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-badge">Best Value</div>
+      <div class="product-img"><div class="product-model" data-model="ESSENTIAL"></div></div>
+      <div class="product-body">
+        <div class="product-name">Alkonic Essential</div>
+        <div class="product-tagline">Perfect entry into alkaline living</div>
+        <div class="product-specs">
+          <div class="spec"><span class="spec-key">Plates</span><span class="spec-val">5 Platinum</span></div>
+          <div class="spec"><span class="spec-key">pH Range</span><span class="spec-val">3.5 – 9.5</span></div>
+          <div class="spec"><span class="spec-key">ORP</span><span class="spec-val">-650 mV</span></div>
+          <div class="spec"><span class="spec-key">Warranty</span><span class="spec-val">3 Years</span></div>
+        </div>
+        <div class="product-price">₹1,54,999 <span>onwards</span></div>
+        <button class="btn-product" onclick="openModal()">View Details & Quote</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-badge" style="background:var(--navy);color:var(--gold)">Most Popular</div>
+      <div class="product-img"><div class="product-model" data-model="PRO X7"></div></div>
+      <div class="product-body">
+        <div class="product-name">Alkonic Pro X7</div>
+        <div class="product-tagline">The health enthusiast's choice</div>
+        <div class="product-specs">
+          <div class="spec"><span class="spec-key">Plates</span><span class="spec-val">7 Platinum</span></div>
+          <div class="spec"><span class="spec-key">pH Range</span><span class="spec-val">2.5 – 11.5</span></div>
+          <div class="spec"><span class="spec-key">ORP</span><span class="spec-val">-800 mV</span></div>
+          <div class="spec"><span class="spec-key">Warranty</span><span class="spec-val">5 Years</span></div>
+        </div>
+        <div class="product-price">₹2,14,999 <span>onwards</span></div>
+        <button class="btn-product" onclick="openModal()">View Details & Quote</button>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-badge" style="background:#8b7536">Flagship</div>
+      <div class="product-img"><div class="product-model" data-model="ELITE X9"></div></div>
+      <div class="product-body">
+        <div class="product-name">Alkonic Elite X9</div>
+        <div class="product-tagline">Uncompromised medical-grade performance</div>
+        <div class="product-specs">
+          <div class="spec"><span class="spec-key">Plates</span><span class="spec-val">9 Titanium+</span></div>
+          <div class="spec"><span class="spec-key">pH Range</span><span class="spec-val">1.5 – 12.5</span></div>
+          <div class="spec"><span class="spec-key">ORP</span><span class="spec-val">-1050 mV</span></div>
+          <div class="spec"><span class="spec-key">Warranty</span><span class="spec-val">5 Years</span></div>
+        </div>
+        <div class="product-price">₹2,89,999 <span>onwards</span></div>
+        <button class="btn-product" onclick="openModal()">View Details & Quote</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+  <div class="reveal">
+    <div class="section-label">Innovation</div>
+    <h2 class="section-title" style="color:var(--white)">5th Generation <em style="color:var(--gold)">Water Science</em></h2>
+    <p class="section-desc" style="color:rgba(255,255,255,0.5)">Our proprietary ionization technology draws from decades of Japanese research, delivering water that is fundamentally different — at the molecular level.</p>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-card reveal">
+      <div class="tech-ring"><div class="tech-inner">⚡</div></div>
+      <div class="tech-value">pH 9.5</div>
+      <div class="tech-title">Alkalinity</div>
+      <div class="tech-desc">Precisely controlled alkaline ionization creates water with optimal pH to neutralise body acidity and support enzyme function.</div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-ring"><div class="tech-inner">🔋</div></div>
+      <div class="tech-value">–800mV</div>
+      <div class="tech-title">Antioxidant Power</div>
+      <div class="tech-desc">Negative ORP value means abundant free electrons — nature's most potent antioxidants, quenching harmful free radicals instantly.</div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-ring"><div class="tech-inner">🔬</div></div>
+      <div class="tech-value">0.5nm</div>
+      <div class="tech-title">Micro-Clustered</div>
+      <div class="tech-desc">Smaller water molecule clusters penetrate cell membranes up to 6× more effectively for unmatched cellular hydration.</div>
+    </div>
+    <div class="tech-card reveal">
+      <div class="tech-ring"><div class="tech-inner">💠</div></div>
+      <div class="tech-value">H₂ Rich</div>
+      <div class="tech-title">Activated Hydrogen</div>
+      <div class="tech-desc">Dissolved molecular hydrogen — the world's smallest antioxidant — crosses the blood-brain barrier for neurological protection.</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="comparison">
+  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
+    <div class="section-label">The Difference</div>
+    <h2 class="section-title">Alkonic vs <em>Ordinary Water</em></h2>
+    <p class="section-desc" style="margin:0 auto">See why thousands of health-conscious families across India have made the switch.</p>
+  </div>
+  <div class="scrolling-table">
+  <table class="comparison-table reveal">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Normal Water</th>
+        <th>◆ Alkonic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>pH Level</td><td>6.5 – 7.0</td><td class="highlight-col">7.5 – 9.5</td></tr>
+      <tr><td>ORP (Antioxidant)</td><td>+200 to +400 mV</td><td class="highlight-col">–450 to –800 mV</td></tr>
+      <tr><td>Molecular Hydrogen</td><td><span class="cross">✗ None</span></td><td class="highlight-col"><span class="check">✓ High</span></td></tr>
+      <tr><td>Mineral Content</td><td>Low to None</td><td class="highlight-col">Optimised</td></tr>
+      <tr><td>Micro-Clustered</td><td><span class="cross">✗ No</span></td><td class="highlight-col"><span class="check">✓ Yes</span></td></tr>
+      <tr><td>Detox Support</td><td><span class="cross">✗ Minimal</span></td><td class="highlight-col"><span class="check">✓ Powerful</span></td></tr>
+      <tr><td>Taste</td><td>Neutral / Chlorine</td><td class="highlight-col">Smooth & Silky</td></tr>
+      <tr><td>Auto Self-Cleaning</td><td><span class="cross">✗ No</span></td><td class="highlight-col"><span class="check">✓ DARC System</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- WHY ALKONIC -->
+<section id="why">
+  <div class="reveal">
+    <div class="section-label">Our Promise</div>
+    <h2 class="section-title" style="color:var(--white)">Why Choose <em style="color:var(--gold)">Alkonic</em></h2>
+    <p class="section-desc" style="color:rgba(255,255,255,0.5)">We don't just sell machines. We deliver a lifetime partnership in your family's health journey.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item reveal"><div class="why-icon">🔧</div><div><div class="why-title">Maintenance-Free Operation</div><div class="why-desc">Engineered to run flawlessly for 30+ years with zero maintenance costs. Built for the long haul.</div></div></div>
+    <div class="why-item reveal"><div class="why-icon">🌀</div><div><div class="why-title">DARC Auto-Cleaning</div><div class="why-desc">Dual Automatic Reverse Cleaning technology ensures plates stay pristine, maintaining peak ionization performance automatically.</div></div></div>
+    <div class="why-item reveal"><div class="why-icon">⚡</div><div><div class="why-title">72-Hour Service Guarantee</div><div class="why-desc">Our nationwide service network ensures any issue is resolved within 72 hours — because your health cannot wait.</div></div></div>
+    <div class="why-item reveal"><div class="why-icon">🏆</div><div><div class="why-title">30-Year Machine Life</div><div class="why-desc">Premium titanium plates with platinum coating deliver consistent performance for three full decades — unmatched in the industry.</div></div></div>
+    <div class="why-item reveal"><div class="why-icon">🧾</div><div><div class="why-title">5-Year Comprehensive Warranty</div><div class="why-desc">Complete peace of mind with India's most comprehensive warranty coverage on every Alkonic ionizer sold.</div></div></div>
+    <div class="why-item reveal"><div class="why-icon">🔬</div><div><div class="why-title">Scientifically Validated</div><div class="why-desc">Backed by 29 years of research and partnership with LifeCore laboratories. Every claim is evidence-based.</div></div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="reveal" style="text-align:center">
+    <div class="section-label">Customer Stories</div>
+    <h2 class="section-title">Trusted by <em>17,600+ families</em></h2>
+  </div>
+  <div class="testi-track">
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">After 3 months with Alkonic, my diabetes readings improved significantly. My doctor was surprised and my energy levels have completely transformed. This is not just a machine, it's a health investment.</p>
+      <div class="testi-author"><div class="testi-avatar">RS</div><div><div class="testi-name">Rajesh Sharma</div><div class="testi-location">Delhi, NCR</div></div></div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">My skin has improved dramatically and I sleep so much better now. I was skeptical at first, but the Alkonic team gave me a full demo and the science made complete sense. Best purchase of my life.</p>
+      <div class="testi-author"><div class="testi-avatar">PK</div><div><div class="testi-name">Priya Kapoor</div><div class="testi-location">Mumbai</div></div></div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">The 72-hour service promise is real — I had a query and their technician was at my door the next morning. Premium product, premium service. Alkonic deserves every rupee and more.</p>
+      <div class="testi-author"><div class="testi-avatar">AM</div><div><div class="testi-name">Arjun Menon</div><div class="testi-location">Bengaluru</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="reveal">
+    <div class="section-label">Insights</div>
+    <h2 class="section-title">The Science of <em>Hydration</em></h2>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card reveal">
+      <div class="blog-thumb"><div class="blog-thumb-icon">🧬</div><div class="blog-cat">Science</div></div>
+      <div class="blog-body">
+        <div class="blog-title">How Molecular Hydrogen Fights Oxidative Stress</div>
+        <div class="blog-excerpt">Discover the Nobel Prize-winning science behind molecular hydrogen and why it's being called the most powerful antioxidant ever discovered.</div>
+        <div class="blog-meta"><span>March 2024</span><span>8 min read</span></div>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-thumb"><div class="blog-thumb-icon">💊</div><div class="blog-cat">Health</div></div>
+      <div class="blog-body">
+        <div class="blog-title">Alkaline Water and Type 2 Diabetes: What Research Says</div>
+        <div class="blog-excerpt">A growing body of clinical evidence suggests alkaline ionized water may improve insulin sensitivity and reduce fasting blood glucose levels.</div>
+        <div class="blog-meta"><span>February 2024</span><span>6 min read</span></div>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-thumb"><div class="blog-thumb-icon">🌊</div><div class="blog-cat">Lifestyle</div></div>
+      <div class="blog-body">
+        <div class="blog-title">Why 97% of Alkonic Users Never Go Back to Tap Water</div>
+        <div class="blog-excerpt">From taste to health outcomes — real customers share their journey 12 months after installing an Alkonic ionizer at home.</div>
+        <div class="blog-meta"><span>January 2024</span><span>5 min read</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
+    <div class="section-label">FAQs</div>
+    <h2 class="section-title">Common <em>Questions</em></h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">What is alkaline ionized water and how does it differ from regular water? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Alkaline ionized water is created through electrolysis, which separates water into alkaline and acidic streams. The alkaline water has a higher pH (7.5–9.5), negative ORP (antioxidant value), smaller micro-clustered molecules for better absorption, and activated molecular hydrogen — none of which is present in regular tap or filtered water.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">Is Alkonic water safe for children and elderly? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Yes, absolutely. Alkonic water is safe for all age groups including infants (with guidance), children, adults, and senior citizens. In fact, it is particularly beneficial for elderly individuals managing chronic conditions like diabetes, arthritis, or hypertension. Medical-grade ionization ensures no harmful by-products are created.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">How does the installation work and how long does it take? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Installation is simple and typically takes 1–2 hours. Our certified technician connects the ionizer to your existing water supply — usually under the kitchen sink or on the countertop. No major plumbing is required. We handle everything and provide a full demonstration before leaving.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">What does the 72-hour service guarantee cover? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Our 72-hour service guarantee covers any technical issues, maintenance queries, or performance concerns after installation. Simply call our helpline and a certified Alkonic service professional will reach your location within 72 hours — anywhere in India. This is backed by our nationwide service network.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I get a free demo at my home? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Getting a free demo is simple. Click the "Get Free Demo" button anywhere on this page, fill in your name, phone number, and city, and our team will contact you within 24 hours to schedule a convenient time for a personalized demo at your home. There's absolutely no obligation to purchase.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">What is the DARC auto-cleaning system? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">DARC (Dual Automatic Reverse Cleaning) is Alkonic's proprietary plate-maintenance technology. After every use cycle, the system automatically reverses the polarity to remove mineral deposits from the electrolysis plates. This keeps the plates clean without any manual effort, ensuring consistent performance over the 30-year machine life.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta-final">
+  <h2 class="cta-title reveal">Experience Premium Health<br>with <em>Alkonic</em></h2>
+  <p class="cta-sub reveal">Join 17,600+ Indian families who have transformed their health. Book your free home demo today — no commitment required.</p>
+  <div class="cta-btns reveal">
+    <button class="btn-primary" onclick="openModal()">Book Free Demo</button>
+    <button class="btn-outline" onclick="openModal()">Get a Quote</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-gold-line"></div>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Alk<span>◉</span>nic</div>
+      <div class="footer-tagline">Water Beyond Purity</div>
+      <p class="footer-about">India's most trusted alkaline water ionizer brand since 1995. Backed by 29 years of experience and 17,600+ installations, Alkonic is committed to making premium health accessible to every Indian family.</p>
+      <div class="footer-social">
+        <a class="social-btn" href="#">f</a>
+        <a class="social-btn" href="#">in</a>
+        <a class="social-btn" href="#">yt</a>
+        <a class="social-btn" href="#">ig</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Products</div>
+      <ul class="footer-links">
+        <li><a href="#">Alkonic Essential</a></li>
+        <li><a href="#">Alkonic Pro X7</a></li>
+        <li><a href="#">Alkonic Elite X9</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Compare Models</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#">About Alkonic</a></li>
+        <li><a href="#">Our Technology</a></li>
+        <li><a href="#">Blog & Research</a></li>
+        <li><a href="#">Dealer Network</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="contact-item"><span class="contact-icon">📞</span><span>1800-XXX-XXXX (Toll Free)</span></div>
+      <div class="contact-item"><span class="contact-icon">✉️</span><span>hello@alkonic.com</span></div>
+      <div class="contact-item"><span class="contact-icon">📍</span><span>Pan India — 17,600+ installations across 250+ cities</span></div>
+      <div style="margin-top:20px">
+        <button class="header-cta" onclick="openModal()" style="clip-path:none;padding:12px 24px">Book Demo Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2024 Alkonic. All rights reserved. | alkonic.com</div>
+    <div style="display:flex;gap:20px">
+      <a href="#" style="color:rgba(255,255,255,0.3);text-decoration:none">Privacy Policy</a>
+      <a href="#" style="color:rgba(255,255,255,0.3);text-decoration:none">Terms</a>
+      <a href="#" style="color:rgba(255,255,255,0.3);text-decoration:none">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/91XXXXXXXXXX" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<!-- LEAD FORM MODAL -->
+<div class="overlay" id="modal" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <div class="modal-top">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-title">Get Your Free Demo</div>
+      <div class="modal-sub">Our expert will visit you within 48 hours — no obligation</div>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" placeholder="Your city">
+      </div>
+      <div class="form-group">
+        <label>Interested In</label>
+        <select>
+          <option>Free Home Demo</option>
+          <option>Product Quote</option>
+          <option>Dealer Inquiry</option>
+          <option>Service Request</option>
+        </select>
+      </div>
+      <button class="modal-submit" onclick="submitForm()">Book My Free Demo →</button>
+      <div style="text-align:center;font-size:0.72rem;color:#aab;margin-top:12px">🔒 Your information is 100% secure and never shared</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Header scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 80);
+  });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Counter animation
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = (current >= 1000 ? Math.round(current).toLocaleString('en-IN') : Math.round(current)) + suffix;
+      if (current >= target) clearInterval(timer);
+    }, 16);
+  }
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.target.dataset.target) {
+        animateCounter(e.target);
+        counterObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+  // FAQ accordion
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.classList.remove('open');
+      q.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) { el.classList.add('open'); answer.classList.add('open'); }
+  }
+
+  // Modal
+  function openModal() { document.getElementById('modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('modal').classList.remove('active'); document.body.style.overflow = ''; }
+  function closeModalOutside(e) { if (e.target === document.getElementById('modal')) closeModal(); }
+  function submitForm() {
+    alert('Thank you! Our team will contact you within 24 hours to schedule your free demo.');
+    closeModal();
+  }
+
+  // Keyboard close
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // Hamburger (simple toggle)
+  function toggleMenu() {
+    // Mobile nav — for full impl would show/hide mobile menu
+    openModal();
+  }
+
+  // Exit intent
+  let exitShown = false;
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY < 10 && !exitShown) {
+      exitShown = true;
+      setTimeout(openModal, 400);
+    }
+  });
+</script>
+</body>
+</html>
